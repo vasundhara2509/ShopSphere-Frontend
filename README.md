@@ -1,75 +1,110 @@
-# React + TypeScript + Vite
+# ShopSphere – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+ShopSphere is a modern e-commerce frontend application developed using React.js and TypeScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+It provides an interactive shopping experience where users can browse products, register, log in, manage their cart and wishlist, place orders and view payment information.
 
-## React Compiler
+The frontend communicates with the Spring Boot backend through REST APIs using Axios.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+- React.js
+- TypeScript
+- JavaScript
+- HTML5
+- CSS3
+- Vite
+- Axios
+- React Router
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- User registration and login
+- Product listing and browsing
+- Product search
+- Shopping cart management
+- Add and remove wishlist products
+- Address management
+- Checkout
+- Order placement
+- Order history
+- Order details
+- Order cancellation
+- Payment method selection
+- Payment success page
+- Payment history
+- Product reviews
+- Responsive user interface
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+shopsphere-frontend/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── App.tsx
+│   ├── App.css
+│   └── main.tsx
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## How to Run the Frontend
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**1. Clone the repository**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/vasundhara2509/ShopSphere-Frontend.git
 ```
+
+**2. Navigate to the project**
+
+```bash
+cd ShopSphere-Frontend
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Start the development server**
+
+```bash
+npm run dev
+```
+
+**5. Open the application**
+
+```text
+http://localhost:5173
+```
+
+## Backend Integration
+
+The frontend communicates with the ShopSphere Spring Boot backend.
+
+Backend base URL:
+
+```text
+http://localhost:8080
+```
+
+Make sure the backend and PostgreSQL database are running before using features that require API communication.
+
+## GitHub Repository
+
+[ShopSphere Frontend](https://github.com/vasundhara2509/ShopSphere-Frontend)
+
+## Author
+
+Developed as part of the ShopSphere full-stack e-commerce application project.
